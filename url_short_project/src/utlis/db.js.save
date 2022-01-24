@@ -1,0 +1,31 @@
+const Sequelize = require('sequelize');
+
+const CONNECTION_STRING = process.env.DATABASE_URL || 'postgres://postgres:myPassword@
+localhost:5432/urls';
+const db   = new Sequelize(CONNECTION_STRING)
+
+const User = db.define('user',{
+    name:Sequelize.TEXT,
+    email:{
+        type:Sequelize.TEXT,
+        unique:true
+    },
+    password:Sequelize.TEXT
+});
+
+const Direction = db.define('direction',{
+    destination:Sequelize.TEXT,
+    hash:Sequelize.TEXT
+})
+
+db.sync()
+   .then(d=>{
+       console.log('Databash Synced')
+   })
+   .catch(d=>{
+       console.log(d.message)
+   }) 
+
+module.exports = {
+    db,User,Direction
+}
