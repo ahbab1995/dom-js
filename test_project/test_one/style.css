@@ -1,0 +1,52 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.father_area{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(images/imglog.jpg);
+    background-size: cover;
+    height: 200vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.top_area h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+}
+.top_area h1 span {
+    color: lightslategray;
+}
+.top_area{
+    width: 50%;
+    padding: 13px;
+}
+ul{
+    float:right;
+    list-style-type: none;
+    padding: 10px;
+}
+.mainu_area{
+    max-width: 95%;
+    margin: auto;
+}
+.mainu_area ul li{
+    display: inline-block; 
+}
+.mainu_area ul li a{
+    text-decoration: none;
+    border: 1px solid;
+    color: #ff0000;
+    padding: 9px 10px;
+    transition: 0.6s ease;
+}
+.mainu_area ul li a:hover{
+    background-color: aliceblue;
+    color: #ff0000;
+}
+.content-width{
+    width: 40%;
+    float: left;
+}
+.midel_area{
+    margin: 10px 10%;
+}
